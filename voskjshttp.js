@@ -9,7 +9,7 @@ const { getArgs } = require('./lib/getArgs')
 
 //const HTTP_METHOD = 'GET' 
 const HTTP_PATH = '/transcript'
-const HTTP_PORT = 3000
+var HTTP_PORT = process.env.PORT || 3000 
 
 /**
  * Module global variables
@@ -444,7 +444,7 @@ async function main() {
   const server = http.createServer( (req, res) => requestListener(req, res) )
 
   // listen incoming client requests
-  server.listen( process.env.PORT, () => {
+  server.listen( port, () => {
     log(`server ${path.basename(__filename)} running at http://localhost:${port}`)
     log(`endpoint http://localhost:${port}${HTTP_PATH}`)
     log('press Ctrl-C to shutdown')
