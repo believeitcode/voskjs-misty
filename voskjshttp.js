@@ -9,7 +9,7 @@ const { getArgs } = require('./lib/getArgs')
 
 //const HTTP_METHOD = 'GET' 
 const HTTP_PATH = '/transcript'
-var HTTP_PORT = process.env.PORT || 3000 
+const HTTP_PORT =  process.env.PORT || 3000  
 
 /**
  * Module global variables

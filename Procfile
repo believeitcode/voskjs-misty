@@ -1,1 +1,1 @@
-web: node voskjshttp.js --model=./models/vosk-model-small-en-us-0.15
+web: node voskjshttp.js --model=./models/model-en
